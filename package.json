@@ -1,9 +1,12 @@
 {
+  "homepage": "http://leonardomglgarcia.github.io/my-app"  
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
     "build": "cd packages/react-scripts && node bin/react-scripts.js build",
     "changelog": "lerna-changelog",
     "create-react-app": "node tasks/cra.js",
